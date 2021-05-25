@@ -20,10 +20,11 @@ module.exports = {
 		},
 	},
 	plugins: [
-		new webpack.ProviderPlugin({
+		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery",
-			"windows.jQuery": "jquery" }),
+			"window.jQuery": "jquery",
+		}),
 		new ExtractTextPlugin("app.css"),
 	],
 	module: {
