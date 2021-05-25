@@ -1,10 +1,12 @@
-import '../common/template/dependencies'
-import React from 'react'
+import "../common/template/dependencies";
+import React from "react";
 
-export default props => {
-    return (
-        <div className="wrapper">
-            <h1>App</h1>
-        </div>
-    )
-}
+import Header from "../common/template/header";
+
+export default (props) => {
+	return (
+		<div className="wrapper">
+			<Header></Header>
+		</div>
+	);
+};
