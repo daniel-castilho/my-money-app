@@ -3,8 +3,6 @@ mongoose.Promise = global.Promise;
 
 module.exports = mongoose.connect("mongodb://localhost:27017/mymoney", {
 	useMongoClient: true,
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
 });
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório!";
