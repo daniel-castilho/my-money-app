@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { Component } from "react";
 
-export default props => {
-    return (
-        <h1>Dashboard</h1>
-    )
+import ContentHeader from "../common/template/contentHeader";
+import Content from "../common/template/content";
+
+class Dashboard extends Component {
+	render() {
+		return (
+			<div>
+				<ContentHeader title="Dashboard" small="Versão 1.0" />
+				<Content>Dashboard</Content>
+			</div>
+		);
+	}
 }
+
+export default Dashboard;
