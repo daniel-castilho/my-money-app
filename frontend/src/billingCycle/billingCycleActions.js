@@ -1,6 +1,6 @@
 import axios from "axios";
 import { toastr } from "react-redux-toastr";
-import { reset as resetForm } from "redux-form";
+import { reset as resetForm, initialize } from "redux-form";
 import { showTabs, selectTab } from "../common/tab/tabActions";
 import billingCycle from "./billingCycle";
 
@@ -38,5 +38,6 @@ export function showUpdate(billingCycle) {
 	return [
 		selectTab("tabUpdate"),
 		showTabs("tabUpdate"),
+		initialize("billingCycleForm", billingCycle),
 	]
 }
