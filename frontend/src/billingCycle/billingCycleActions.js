@@ -8,3 +8,10 @@ export function getList() {
 		payload: req,
 	};
 }
+
+export function create(values) {
+	axios.post(`${BASE_URL}/billingCycles`, values);
+	return {
+		type: "BILLING_CYCLES_CREATE",
+	};
+}

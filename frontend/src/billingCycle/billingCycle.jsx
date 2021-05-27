@@ -11,6 +11,7 @@ import TabHeader from "../common/tab/tabHeader";
 import TabContent from "../common/tab/tabContent";
 import List from "./billingCycleList";
 import Form from "./billingCycleForm";
+import { create } from "./billingCycleActions";
 import { selectTab, showTabs, hideTabs } from "../common/tab/tabActions";
 
 class BillingCycle extends Component {
@@ -48,7 +49,7 @@ class BillingCycle extends Component {
 								<List />
 							</TabContent>
 							<TabContent id="tabCreate">
-								<Form />
+								<Form onSubmit={ this.props.create } />
 							</TabContent>
 							<TabContent id="tabUpdate">
 								<h1>Alterar</h1>
@@ -65,6 +66,6 @@ class BillingCycle extends Component {
 }
 
 const mapDispatchToProps = (dispatch) =>
-	bindActionCreators({ selectTab, showTabs }, dispatch);
+	bindActionCreators({ selectTab, showTabs, create }, dispatch);
 
 export default connect(null, mapDispatchToProps)(BillingCycle);
