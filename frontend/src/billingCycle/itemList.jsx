@@ -43,12 +43,8 @@ class ItemList extends Component {
 					/>
 				</td>
 				<If test={this.props.showStatus}>
-                    <td>
-						<Field name={`${this.props.field}[${index}].status`}
-							component={Input}
-							placeholder='Informe o status'
-							readOnly={this.props.readOnly} />
-					</td>
+                    <td><Field name={`${this.props.field}[${index}].status`} component={Input}
+                        placeholder='Informe o status' readOnly={this.props.readOnly} /></td>
                 </If>
 				<td>
 					<button className="btn btn-success"
@@ -81,14 +77,19 @@ class ItemList extends Component {
 							<tr>
 								<th>Nome</th>
 								<th>Valor</th>
+								<If test={this.props.showStatus}>
+									<th>Status</th>
+								</If>
 								<th className="table-actions">Ações</th>
 							</tr>
 						</thead>
-						<tbody>{this.renderRows()}</tbody>
+						<tbody>
+							{this.renderRows()}
+						</tbody>
 					</table>
 				</fieldset>
 			</Grid>
-		);
+		)
 	}
 }
 
