@@ -13,12 +13,3 @@ export function showTabs(...tabIds) {
         payload: tabsToShow,
     }
 }
-
-export function hideTabs(...tabIds) {
-    const tabsToHide = {}
-    tabIds.forEach(e => tabsToHide[e] = false)
-    return {
-        type: 'TAB_HIDDED',
-        payload: tabsToHide,
-    }
-}

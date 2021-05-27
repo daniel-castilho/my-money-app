@@ -6,8 +6,6 @@ export default (state = INITIAL_STATE, action) => {
 			return { ...state, selected: action.payload };
         case "TAB_SHOWED":
             return { ...state, visible: action.payload };
-        case "TAB_HIDDED":
-            return { ...state, visible: action.payload };
 		default:
 			return state;
 	}
